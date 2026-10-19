@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "Cite relevant perturbation datasets and model papers if using CellPert-Lite."
+title: "CellPert-Lite"
+version: 1.0.0
+date-released: 2026-10-19
+type: software

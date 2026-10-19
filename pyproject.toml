@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "cellpert-lite"
+version = "1.0.0"
+description = "Runnable baseline framework for gene perturbation response prediction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.24,<3", "pandas>=2.0", "scikit-learn>=1.3", "scipy>=1.10", "matplotlib>=3.7", "joblib>=1.3"]
+[project.optional-dependencies]
+singlecell = ["anndata>=0.10", "h5py>=3.9"]
+dev = ["pytest>=7.4"]
+[project.scripts]
+cellpert = "cellpert.cli:main"
+[tool.setuptools.packages.find]
+include = ["cellpert*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
